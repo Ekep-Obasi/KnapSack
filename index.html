@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>KnapSack App</title>
+  </head>
+  <body>
+    <div class="full-screen-container">
+      <div class="header">
+        <div class="title">KnapSack.</div>
+        <div class="darkMode">
+          <button id="shift" class=""><div></div></button>
+          <div class="darkmodetitle">Dark mode</div>
+        </div>
+      </div>
+      <div class="inputFeild">
+        <p title="maximum weight Capacity">Input MVC</p>
+        <div class="container">
+          <span class="next"></span>
+          <span class="prev"></span>
+          <div id="box">
+            <span id="inputVal">0</span>
+          </div>
+        </div>
+        <button id="done"><span class="good" id="check"> ✔</span> Done</button>
+      </div>
+      <div class="display"></div>
+      <div class="selection">
+        <p>Select Items</p>
+        <select id="select" aria-placeholder="please select an Item">
+          <option disabled>items</option>
+          <option>tomato</option>
+          <option>apples</option>
+          <option>banana</option>
+          <option>groundnut</option>
+          <option>beans</option>
+          <option>yam</option>
+          <option>cocoyam</option>
+          <option>bread</option>
+          <option>chocolate</option>
+          <option>butter</option>
+          <option>meat</option>
+          <option>fish</option>
+          <option>coconut</option>
+          <option>corn</option>
+          <option>vegetable</option>
+          <option>water</option>
+          <option>orange</option>
+          <option>grapes</option>
+          <option>pineaples</option>
+        </select>
+        <div class="state"><p class="currVal"></p></div>
+      </div>
+    </div>
+    <script src="scprit.js"></script>
+  </body>
+</html>
