@@ -71,10 +71,22 @@ body{
   width: 80px;
   height: 40px;
   border-radius: 40px;
-  border: 2px solid rgb(255, 255, 255,.2);
+  border: 2px solid rgb(211, 211, 211);
   transition: 0.5s;
 }
 .container:hover{
+  width: 120px;
+  border: 2px solid rgb(211, 211, 211, 0.8);
+}
+.darkContainer{
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border-radius: 40px;
+  border: 2px solid rgb(255, 255, 255,.2);
+  transition: 0.5s;
+}
+.darkContainer:hover{
   width: 120px;
   border: 2px solid rgb(255, 255, 255,1);
 }
@@ -133,7 +145,20 @@ select {
   display: block;
   height: 3em;
   line-height: 3;
-  background: rgb(33, 32, 32, 0.9);
+  background: white;
+  overflow: hidden;
+  border: 2px solid lightgray;
+  border-radius: .5em;
+  padding: 0 0 0 .5em;
+  color: black;
+  cursor: pointer;
+}
+.listDark{
+  position: relative;
+  display: block;
+  height: 3em;
+  line-height: 3;
+  background: #212020;
   overflow: hidden;
   border: 2px solid rgb(255, 255, 255,.2);
   border-radius: .5em;
@@ -157,7 +182,7 @@ select {
   align-items: center;
   justify-content: center;
 }
-.display .dark{
+.dark{
   width: 100%;
   height: 275px;
   border: 2px solid rgb(255, 255, 255,.2);

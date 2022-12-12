@@ -4,8 +4,10 @@ document.querySelector("#shift").addEventListener("click", () => {
   document.querySelector("#shift").classList.add("ok");
   document.querySelector(".full-screen-container").style.background = "#212020";
   document.body.style.color = "white";
-  document.querySelector(".display").classList.add("dark");
+  document.querySelector(".display").classList.toggle("dark");
+  document.querySelector(".container").classList.toggle("darkContainer");
   document.querySelector(".darkMode").style.color = "white";
+  document.querySelector("#select").classList.toggle("listDark");
   count++;
   if (count > 1) {
     document.querySelector("#shift").classList.remove("ok");
@@ -34,13 +36,15 @@ let sum = 0;
 document.querySelector("#done").addEventListener("click", () => {
   document.querySelector("#check").classList.remove("good");
   document.querySelector("#done").disabled = true;
-  selector.addEventListener("change", () => {
-    if (sum < countNum) {
+
+  if (sum < countNum) {
+    selector.addEventListener("change", () => {
       document.querySelector(".display").innerHTML +=
         selector.value + " " + "<hr style = 'opacity : 0.1;' >";
       for (let i = 0; i < itemList.length; i++) {
         if (selector.value == itemList[i].name) {
           sum += itemList[i].weight;
+          console.log(sum, countNum);
         }
       }
       for (let j = 0; j < itemList.length; j++) {
@@ -50,8 +54,8 @@ document.querySelector("#done").addEventListener("click", () => {
       }
       document.querySelector(".currVal").innerHTML =
         "Current weight:" + " " + sum;
-    }
-  });
+    });
+  }
 });
 
 // array of Objects
